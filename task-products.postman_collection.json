@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "d267cb44-6924-4f3d-8ff8-164eb066e513",
+		"name": "task-products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23470625",
+		"_collection_link": "https://lively-crescent-613794.postman.co/workspace/furball~d356f8cb-7bda-4339-879f-c696ea2ae3e5/collection/23470625-d267cb44-6924-4f3d-8ff8-164eb066e513?action=share&source=collection_link&creator=23470625"
+	},
+	"item": [
+		{
+			"name": "getProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/product/getProduct?id=6614e467dc3834c79423cabe",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"getProduct"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6614e467dc3834c79423cabe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"P1\",\r\n    \"price\": 200,\r\n    \"description\": \"Test Product\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product/addProduct",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"6614e467dc3834c79423cabe\",\r\n    \"name\": \"test\",\r\n    \"price\": 200,\r\n    \"description\": \"Test Product\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product/updateProduct",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"updateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProducts (all products)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/product/getProducts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"getProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/product/searchProducts?search=p",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"searchProducts"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "p"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://192.168.29.254:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
